@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/post_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="Unblast"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/circle_postImage_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/post_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Buckle up, because change is coming to WordPress"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="@+id/circle_postImage_view"
+        app:layout_constraintTop_toBottomOf="@+id/circle_postImage_view" />
+
+    <TextView
+        android:id="@+id/post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 hrs"
+        android:textSize="@dimen/extra_small_text_size"
+        app:layout_constraintStart_toStartOf="@+id/post_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/post_user_name" />
+
+    <ImageView
+        android:id="@+id/triple_dots_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/more_horiz"
+        android:contentDescription="settings_icon" />
+
+    <TextView
+        android:id="@+id/hyperlink_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="http://unblast.com/color-schemes"
+        android:textColor="@color/hyper_link_color"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="@+id/circle_postImage_view"
+        app:layout_constraintTop_toBottomOf="@+id/circle_postImage_view" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_postImage_view"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/margin_top_small_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/post_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/margin_top_small_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hyperlink_text"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        android:contentDescription="@string/post_image" />
+
+    <ImageView
+        android:id="@+id/like_text_view"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_image_view"
+        app:srcCompat="@drawable/fb_like_icon"
+        android:contentDescription="@string/like_icon" />
+
+    <TextView
+        android:id="@+id/likes_no_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="9dp"
+        android:text="12"
+        android:textSize="@dimen/small_text_size"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/like_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/post_image_view" />
+
+    <TextView
+        android:id="@+id/share_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:text="Share"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/circle_postImage_view_under_post"
+        app:layout_constraintTop_toBottomOf="@+id/post_image_view" />
+
+    <TextView
+        android:id="@+id/share_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="4dp"
+        android:text="1"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/share_tv"
+        app:layout_constraintTop_toBottomOf="@+id/post_image_view" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_postImage_view_under_post"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_image_view"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/arrowdown"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_image_view"
+        app:srcCompat="@drawable/sharp_arrow_drop_down_24"
+        android:contentDescription="@string/arrow_down" />
+
+    <LinearLayout
+        android:id="@+id/comments_likes_shares_linearLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_image_view">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/outlined_facebook_like"
+            android:drawablePadding="10dp"
+            android:text="Like"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/outlined_facebook_comment"
+            android:drawablePadding="10dp"
+            android:text="Comment"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/outlined_facebook_share"
+            android:drawablePadding="10dp"
+            android:text="Share"
+            android:textSize="@dimen/small_text_size" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
